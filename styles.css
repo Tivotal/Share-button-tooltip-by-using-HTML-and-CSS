@@ -1,0 +1,129 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #4070f4;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper input {
+  display: none;
+}
+
+.wrapper label {
+  display: block;
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 35px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  color: #4070f4;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.wrapper label:hover {
+  letter-spacing: 1px;
+}
+
+.wrapper label::before {
+  content: "Cancel";
+  background-color: #fff;
+  width: 150px;
+  height: 50px;
+  border-radius: 35px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#check:checked ~ label::before {
+  opacity: 1;
+}
+
+.wrapper .media-icons {
+  position: absolute;
+  left: 50%;
+  top: -120px;
+  display: flex;
+  width: 140%;
+  height: 110%;
+  background-color: #fff;
+  border-radius: 35px;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4px;
+  z-index: 1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ .media-icons {
+  opacity: 1;
+  pointer-events: auto;
+  top: -84px;
+}
+
+.wrapper .media-icons::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  bottom: -9px;
+  transform: translateX(-50%) rotate(45deg);
+  left: 50%;
+  z-index: -1;
+}
+
+.wrapper .media-icons a {
+  font-size: 22px;
+  color: #4070f4;
+  transition: all 0.3s ease;
+}
+
+.wrapper .media-icons a:hover {
+  transform: translateY(-2px);
+}
+
+.wrapper .media-icons a:nth-child(1):hover {
+  color: #426782;
+}
+
+.wrapper .media-icons a:nth-child(2):hover {
+  color: #1da1f2;
+}
+
+.wrapper .media-icons a:nth-child(3):hover {
+  color: #e1306c;
+}
+
+.wrapper .media-icons a:nth-child(4):hover {
+  color: #ff0000;
+}
